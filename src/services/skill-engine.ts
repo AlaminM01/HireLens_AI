@@ -152,6 +152,13 @@ export const ROLE_SKILL_BENCHMARKS: Record<TargetRole, RoleBenchmark> = {
 
 export class SkillEngineService {
   /**
+   * Get all benchmarked roles
+   */
+  public static getAvailableRoles(): TargetRole[] {
+    return Object.keys(ROLE_SKILL_BENCHMARKS) as TargetRole[];
+  }
+
+  /**
    * Analyze skill gaps between candidate resume and target role benchmark
    */
   public static analyze(

@@ -1,12 +1,29 @@
+import React from 'react';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
+import { HeroSection } from '@/components/landing/HeroSection';
+import { StatsSection } from '@/components/landing/StatsSection';
+import { FeatureShowcase } from '@/components/landing/FeatureShowcase';
+import { TestimonialsSection } from '@/components/landing/TestimonialsSection';
+import { CTASection } from '@/components/landing/CTASection';
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-5xl font-extrabold tracking-tight text-white mb-4">
-        HireLens <span className="text-gradient">AI</span>
-      </h1>
-      <p className="text-lg text-slate-400 max-w-xl">
-        See Your Resume Through a Recruiter&apos;s Eyes. Next-generation AI platform for resume intelligence and career acceleration.
-      </p>
-    </main>
+    <div className="flex min-h-screen flex-col bg-brand-dark selection:bg-brand-primary selection:text-white">
+      {/* Global SaaS Navigation */}
+      <Navbar />
+
+      {/* Main Hero with Live Simulator Preview */}
+      <main className="flex-1">
+        <HeroSection />
+        <StatsSection />
+        <FeatureShowcase />
+        <TestimonialsSection />
+        <CTASection />
+      </main>
+
+      {/* Startup Footer */}
+      <Footer />
+    </div>
   );
 }

@@ -45,6 +45,7 @@ export default function JobMatchPage() {
 
     const result = JobMatcherService.analyze(parsed, jdText, selectedSample.split(' - ')[1] || 'Software Engineer');
     setMatchResult(result);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleRunMatch = () => {

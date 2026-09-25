@@ -142,8 +142,8 @@ export const HeroSection: React.FC = () => {
               {/* Score Dial */}
               <div className="rounded-xl bg-white/[0.03] border border-white/10 p-5 flex flex-col items-center justify-center text-center">
                 <span className="text-xs uppercase font-bold text-slate-400 tracking-wider mb-2">ATS Match Score</span>
-                <div className="relative w-32 h-32 flex items-center justify-center">
-                  <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                <div style={{ width: '128px', height: '128px' }} className="relative w-32 h-32 flex items-center justify-center">
+                  <svg width="128" height="128" className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.1)" strokeWidth="8" fill="none" />
                     <circle
                       cx="50"

@@ -35,9 +35,22 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   const content = (
     <div className="inline-flex items-center gap-2.5 group select-none">
       {/* Aperture Lens Icon */}
-      <div className={`relative ${iconSizes[size]} rounded-xl bg-slate-900 border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/10 group-hover:border-blue-500/50 transition-colors`}>
+      <div 
+        style={{
+          width: size === 'sm' ? '28px' : size === 'lg' ? '48px' : '36px',
+          height: size === 'sm' ? '28px' : size === 'lg' ? '48px' : '36px',
+          flexShrink: 0
+        }}
+        className={`relative ${iconSizes[size]} rounded-xl bg-slate-900 border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/10 group-hover:border-blue-500/50 transition-colors`}
+      >
         <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-brand-primary/20 to-brand-secondary/20 blur-sm opacity-50 group-hover:opacity-100 transition-opacity" />
-        <svg viewBox="0 0 24 24" className="w-full h-full relative z-10" fill="none">
+        <svg 
+          viewBox="0 0 24 24" 
+          width={size === 'sm' ? 20 : size === 'lg' ? 36 : 28} 
+          height={size === 'sm' ? 20 : size === 'lg' ? 36 : 28} 
+          className="w-full h-full relative z-10" 
+          fill="none"
+        >
           <circle cx="12" cy="12" r="8" stroke="url(#logoGrad)" strokeWidth="2" strokeDasharray="3 2" />
           <circle cx="12" cy="12" r="4" fill="url(#logoGrad)" />
           <circle cx="10.5" cy="10.5" r="1.5" fill="#FFFFFF" fillOpacity="0.9" />
